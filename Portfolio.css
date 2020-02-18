@@ -24,7 +24,7 @@ body {
 /* This cell contains other cells */
 .hedder {
     position: sticky;
-    top:0;
+    top: 0;
     padding: 20px;
     background: white;
     grid-row: 1; 
@@ -147,7 +147,7 @@ body {
 /* This cell contains other cells */
 .hedder {
     position: sticky;
-    top:0;
+    top: 0;
     padding: 20px;
     background: white;
     grid-row: 1; 
