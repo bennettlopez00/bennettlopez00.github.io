@@ -1,89 +1,259 @@
-body {
-  background-color: black;
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.container {
-  height: 110vh;
-  margin: 10px;
-  display: grid;
-  grid-gap: 10px 10px;
-  
-  grid-template-columns: 1fr 1fr;
+
+body {
+    background-color: black;
+}
+
+.TheGrid {
+    font-family: Optima;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px, repeat(6, 1000px) 40px;
 }
 
 .cell {
-  height: 300px;
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  padding: 4rem;
+  color: black;
 }
 
-.cell-top {
-  position: sticky;
-  top: 0;
-  height: 10px;
-  background: blue;
-  grid-row: 1/2; 
-  grid-column: 1/4;
-  
-  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* This cell contains other cells */
+.hedder {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background: white;
+    grid-row: 1; 
+    grid-column: 1/4;
+    
+    /* The setting for the inner grid */
+    
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 45px;
+    grid-template-columns: 100px repeat(6, 1fr);
 }
 
+    /* General tags for the cells inside the hedder */ 
+    .hedder .cell {
+        background-color: white;
+        text-align: center;
+    }
+    
+    /* The inner hedder gird cells */
+    .logo {
+        grid-row: 1; 
+        grid-column: 1/2;
+    }
+    .portfolio {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 5/6;
+    }
+    
+    .resume {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 6/7;
+    }
+    
+    .more {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 7/8;
+    }
 
-.cell-1 {
-  background: deepskyblue;
-  grid-row: 2/3; 
-  grid-column: 1/3; 
-}
-.cell-2 {
-
-  background-color: white;
-  grid-row: 2/3; 
-  grid-column: 3/4;
-  content:url(V1yuncwQ.png);
-}
-.cell-3 {
-  padding: 0px;
-  max-width: auto;
-  grid-row: 3/4; 
-  grid-column: 1/2; 
-  content:url(0049.jpg);
-}
-.cell-4 {
-  background: gold;
-  grid-row: 3/4; 
-  grid-column: 2/4; 
-}
-.cell-5 {
-  background: blueviolet;
-  height: 1000px;
-  grid-row: 4/8; 
-  grid-column: 1/4
-}
-.cell-6 {
-  height: 50px;
-  background: blue;
-  grid-row: 8/9; 
-  grid-column: 1/4;
+.intro {
+    background: black;
+    grid-row: 2/3; 
+    grid-column: 1/4;
+    
+    /*Grid Settings*/
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
-.cell-15 {
-    padding: 0rem;
-    background-color: #ccc;
+    .intro_image {
+        grid-row: 1/2; 
+        grid-column: 1;
+    }
+    
+    .intro_text {
+        padding: 50px;
+        color: white;
+        text-align: center;
+        grid-row: 2/3; 
+        grid-column: 1;
+    }
+
+.body-1 {
+    padding: 50px;
+    color: grey;
     text-align: center;
+    background: #F1EFF0;
+    grid-row: 5/6; 
+    grid-column: 1; 
+}
+.photo-1 {
+    text-align: right;
+    background: #F1EFF0;
+    grid-row: 4/5; 
+    grid-column: 1;
+}
+.photo-2 {
+    text-align: left;
+    background:black;
+    grid-row: 6/7; 
+    grid-column: 1; 
+}
+.body-2 {
+    padding: 50px;
     color: white;
-    grid-row: 1;
-    grid-column: 1 / 3;
+    text-align: center;
+    background: black;
+    color: white;
+    grid-row: 7/8; 
+    grid-column: 1; 
+}
+.footer {
+    padding-top: 5px;
+    text-align: center;
+    background: #353535;
+    color: white;
+    grid-row: 8/9; 
+    grid-column: 1; 
 }
 
-.cell-16 {
-    padding: 0rem;
-    background-color: #ccc;
+
+
+/***** FOR DESKTOP *********/
+
+@media (min-width: 1200px) {
+    .TheGrid {
+        font-family: Optima;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 90px 600px repeat(2, 500px) 40px;
+        display:grid;
+    }
+    .cell {
+  color: black;
+}
+
+/* This cell contains other cells */
+.hedder {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background: white;
+    grid-row: 1; 
+    grid-column: 1/4;
+    
+    /* The setting for the inner grid */
+    
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 45px;
+    grid-template-columns: 100px repeat(6, 1fr);
+}
+
+    /* General tags for the cells inside the hedder */ 
+    .hedder .cell {
+        background-color: white;
+        text-align: center;
+    }
+    
+    /* The inner hedder gird cells */
+    .logo {
+        grid-row: 1; 
+        grid-column: 1/2;
+    }
+    .portfolio {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 5/6;
+    }
+    
+    .resume {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 6/7;
+    }
+    
+    .more {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 7/8;
+    }
+
+.intro {
+    background: black;
+    grid-row: 2/3; 
+    grid-column: 1/4;
+    
+    /*Grid Settings*/
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+
+    .intro_image {
+        grid-row: 1; 
+        grid-column: 1/2;
+    }
+    
+    .intro_text {
+        color: white;
+        padding-top: 100px;
+        padding-right: 160px;
+        text-align: center;
+        grid-row: 1; 
+        grid-column: 2/3;
+    }
+
+.body-1 {
+    color: grey;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-left: 100px;
     text-align: center;
+    background: #F1EFF0;
+    grid-row: 3/4; 
+    grid-column: 1/2;
+}
+.photo-1 {
+    text-align: right;
+    background: #F1EFF0;
+    grid-row: 3/4; 
+    grid-column: 2/4; 
+}
+.photo-2 {
+    text-align: left;
+    background:black;
+    grid-row: 4/5; 
+    grid-column: 1/3; 
+}
+.body-2 {
     color: white;
-    grid-row: 1;
-    grid-column: 3 / 4;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-left: 50px;
+    text-align: center;
+    background: black;
+    color: white;
+    grid-row: 4/5; 
+    grid-column: 3/4; 
+}
+.footer {
+    padding-top: 5px;
+    text-align: center;
+    background: #353535;
+    color: white;
+    grid-row: 5/6; 
+    grid-column: 1/4; 
+}
 }
