@@ -1,3 +1,4 @@
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -11,9 +12,9 @@ body {
 
 .TheGrid {
     font-family: Optima;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 90px 600px repeat(2, 500px) 40px;
-    display:grid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px, repeat(6, 1000px) 40px;
 }
 
 .cell {
@@ -22,8 +23,131 @@ body {
 
 /* This cell contains other cells */
 .hedder {
-    position: sticky;
-    top:0;
+    /* position: sticky;
+    top:0; */
+    padding: 20px;
+    background: white;
+    grid-row: 1; 
+    grid-column: 1/4;
+    
+    /* The setting for the inner grid */
+    
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 45px;
+    grid-template-columns: 100px repeat(6, 1fr);
+}
+
+    /* General tags for the cells inside the hedder */ 
+    .hedder .cell {
+        background-color: white;
+        text-align: center;
+    }
+    
+    /* The inner hedder gird cells */
+    .logo {
+        grid-row: 1; 
+        grid-column: 1/2;
+    }
+    .portfolio {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 5/6;
+    }
+    
+    .resume {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 6/7;
+    }
+    
+    .more {
+        padding-top: 15px;
+        grid-row: 1; 
+        grid-column: 7/8;
+    }
+
+.intro {
+    background: black;
+    grid-row: 2/3; 
+    grid-column: 1/4;
+    
+    /*Grid Settings*/
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+    .intro_image {
+        grid-row: 1/2; 
+        grid-column: 1;
+    }
+    
+    .intro_text {
+        padding: 50px;
+        color: white;
+        text-align: center;
+        grid-row: 2/3; 
+        grid-column: 1;
+    }
+
+.body-1 {
+    padding: 50px;
+    color: grey;
+    text-align: center;
+    background: #F1EFF0;
+    grid-row: 5/6; 
+    grid-column: 1; 
+}
+.photo-1 {
+    text-align: right;
+    background: #F1EFF0;
+    grid-row: 4/5; 
+    grid-column: 1;
+}
+.photo-2 {
+    text-align: left;
+    background:black;
+    grid-row: 6/7; 
+    grid-column: 1; 
+}
+.body-2 {
+    padding: 50px;
+    color: white;
+    text-align: center;
+    background: black;
+    color: white;
+    grid-row: 7/8; 
+    grid-column: 1; 
+}
+.footer {
+    padding-top: 5px;
+    text-align: center;
+    background: #353535;
+    color: white;
+    grid-row: 8/9; 
+    grid-column: 1; 
+}
+
+
+
+/***** FOR DESKTOP *********/
+
+@media (min-width: 1200px) {
+    .TheGrid {
+        font-family: Optima;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 90px 600px repeat(2, 500px) 40px;
+        display:grid;
+    }
+    .cell {
+  color: black;
+}
+
+/* This cell contains other cells */
+.hedder {
+    /* position: sticky;
+    top:0; */
     padding: 20px;
     background: white;
     grid-row: 1; 
@@ -74,7 +198,7 @@ body {
     /*Grid Settings*/
     display: grid;
     grid-template-rows: 30px;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
     .intro_image {
@@ -85,7 +209,7 @@ body {
     .intro_text {
         color: white;
         padding-top: 100px;
-        padding-right: 200px;
+        padding-right: 160px;
         text-align: center;
         grid-row: 1; 
         grid-column: 2/3;
@@ -114,15 +238,10 @@ body {
     grid-column: 1/3; 
 }
 .body-2 {
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    overflow: hidden;
-  
-  
     color: white;
     padding-top: 100px;
-    padding-right: 200px;
-    padding-left: 20px;
+    padding-right: 100px;
+    padding-left: 50px;
     text-align: center;
     background: black;
     color: white;
@@ -136,4 +255,5 @@ body {
     color: white;
     grid-row: 5/6; 
     grid-column: 1/4; 
+}
 }
