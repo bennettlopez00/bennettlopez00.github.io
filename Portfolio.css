@@ -74,7 +74,7 @@ body {
     /*Grid Settings*/
     display: grid;
     grid-template-rows: 30px;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 3fr 1fr;
 }
 
     .intro_image {
@@ -114,10 +114,15 @@ body {
     grid-column: 1/3; 
 }
 .body-2 {
-color: white;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+  
+  
+    color: white;
     padding-top: 100px;
     padding-right: 200px;
-    padding-left: 100px;
+    padding-left: 20px;
     text-align: center;
     background: black;
     color: white;
