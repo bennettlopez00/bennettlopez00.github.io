@@ -295,7 +295,7 @@
         .SkillTitle {
             grid-column: 1/7;
             grid-row: 1;
-            color: black;
+            color: inherent;
             font-size: 30px;
         }
         
