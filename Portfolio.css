@@ -480,7 +480,7 @@
         /* Grid Options*/
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: .0000000001fr 2200px .5fr .5fr 120vw .3fr .1fr;
+        grid-template-rows: .0000000001px 2200px .5fr .5fr 120vw .3fr .1fr;
     }
     
     .Hedder {
