@@ -1,288 +1,851 @@
-
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-/* Links for the top nav bar */
-
-a:link {
-  color: black; 
-  background-color: transparent; 
-  text-decoration: none;
-}
-
-a:visited {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  font-size: 27px;
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-body {
-    background-color: black;
-}
-
-.TheGrid {
-    font-family: Optima;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px, repeat(6, 1000px) 40px;
-}
-
-.cell {
-  color: black;
-}
-
-/* This cell contains other cells */
-.hedder {
-    position: sticky;
-    top: 0;
-    padding-top: 50px;
-    background: white;
-    grid-row: 1; 
-    grid-column: 1/4;
-    
-    /* The setting for the inner grid */
-    
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: 120px;
-    grid-template-columns: 100px repeat(6, 1fr);
-}
-
-    /* General tags for the cells inside the hedder */ 
-    .hedder .cell {
-        font-size: 25px;
-        text-align: center;
-    }
-    
-    /* The inner hedder gird cells */
-    .logo {
-        grid-row: 1; 
-        grid-column: 1/2;
-    }
-    .portfolio {
-        padding-left: 20px;
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 4/5;
-    }
-    
-    .resume {
-        padding-left: 20px;
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 5/6;
-    }
-    
-    .linkedin {
-        padding-left: 20px;
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 6/7;
-    }
-
-.intro {
-    background: black;
-    grid-row: 2/3; 
-    grid-column: 1/4;
-    
-    /*Grid Settings*/
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
-
-    .intro_image {
-        grid-row: 1/2; 
-        grid-column: 1;
-    }
-    
-    .intro_text {
-        padding: 50px;
-        color: white;
-        text-align: center;
-        grid-row: 2/3; 
-        grid-column: 1;
-    }
-
-.body-1 {
-    padding: 50px;
-    color: grey;
-    text-align: center;
-    background: #F1EFF0;
-    grid-row: 5/6; 
-    grid-column: 1; 
-}
-.photo-1 {
-    text-align: right;
-    background: #F1EFF0;
-    grid-row: 4/5; 
-    grid-column: 1;
-}
-.photo-2 {
-    text-align: left;
-    background:black;
-    grid-row: 6/7; 
-    grid-column: 1; 
-}
-.body-2 {
-    padding: 50px;
-    color: white;
-    text-align: center;
-    background: black;
-    color: white;
-    grid-row: 7/8; 
-    grid-column: 1; 
-}
-.footer {
-    padding-top: 5px;
-    text-align: center;
-    background: #353535;
-    color: white;
-    grid-row: 8/9; 
-    grid-column: 1; 
-}
-
-
-
 /***** FOR DESKTOP *********/
-
-@media (min-width: 1200px) {
-    .TheGrid {
-        font-family: Optima;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 90px 600px repeat(2, 500px) 40px;
-        display:grid;
+ @media only screen and (min-width: 1125px) {   
+    /* unvisited link */
+    a:link {
+      color: white;
+      text-decoration: none;
     }
-    .cell {
-  color: black;
-}
-
-/* This cell contains other cells */
-.hedder {
-    position: sticky;
-    top: 0;
-    padding: 20px;
-    background: white;
-    grid-row: 1; 
-    grid-column: 1/4;
     
-    /* The setting for the inner grid */
+    /* visited link */
+    a:visited {
+      color: white;
+    }
     
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: 45px;
-    grid-template-columns: 100px repeat(7, 1fr);
-}
-
-    /* General tags for the cells inside the hedder */ 
-    .hedder .cell {
+    /* mouse over link */
+    a:hover {
+      color: white;
+      font-size: 20px;
+    }
+    
+    /* selected link */
+    a:active {
+      color: white;
+    }
+    
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'Domine', serif;
+        color: black;
         background-color: white;
-        text-align: center;
     }
     
-    /* The inner hedder gird cells */
-    .logo {
-        grid-row: 1; 
-        grid-column: 1/2;
-    }
-    .portfolio {
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 5/6;
+    .TheGrid {
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 75px 780px 570px repeat(2, 800px) 530px 100px;
     }
     
-    .resume {
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 6/7;
+    .Hedder {
+        background-color: #006BB5;
+        color: #f5f5f5;
+        grid-column: 1/3;
+        grid-row: 1/2;
+      
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 1fr) 4fr;
+        grid-template-rows: 1fr;
+    }
+        .About {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+        
+        .Education {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 3/4;
+            grid-row: 1;
+        }
+        
+        .Skills-Languages {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 4/5;
+            grid-row: 1;
+        }
+        
+        .Interests {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 5/6;
+            grid-row: 1;
+        }
+        
+    .First-Body {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
     }
     
-    .linkedin {
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 7/8;
+        .Transparent-Background {
+            /* The image used */
+            background-image: url("personWalking.jpg");
+    
+            /* Set a specific height */
+            height: 780px; 
+    
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            /* Cell settings */
+            grid-column: 1/2;
+            grid-row: 1;
+            z-index: 1;
+        }
+        
+        .Transparent-Text {
+            padding-top: 400px;
+            padding-left: 20px;
+            color: white;
+            grid-column: 1/2;
+            grid-row: 1;
+            z-index: 2;
+        }
+        
+            .Transparent-Text #p1 {
+                font-family: 'EB Garamond', serif;
+                font-size: 30px;
+            }
+            
+            .Transparent-Text #p2 {
+                font-family: 'boldFont', sans-serif;
+                font-size: 105px;
+            }
+            
+            .Transparent-Text #p3 {
+                font-size: 30px;
+            }
+            
+            .Transparent-Text #p4 {
+                font-size: 15px;
+            }
+            
+        .Infrmation-Holder {
+            color: white;
+            text-align: center;
+            background-color: #006BB5;
+            grid-column: 2/3;
+            grid-row: 1;
+            
+            /* Grid Options*/
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 200px 70px 100px 150px 70px 90px;
+        }
+            .Photo {
+                grid-column: 1;
+                grid-row: 1/2;
+            }
+            
+            .Photo #ProfPhoto {
+                object-fit: cover;
+                width: 200px;
+                height: 200px;
+            }
+            
+            .Name {
+                font-size: 30px;
+                padding-top: 20px;
+                grid-column: 1;
+                grid-row: 2/3;
+            }
+            
+            .Education-Small {
+                padding-top: 20px;
+                grid-column: 1;
+                grid-row: 3/4;
+            }
+            
+            .Contact {
+                padding-top: 80px;
+                grid-column: 1;
+                grid-row: 4/5;
+            }
+        
+            .Social-Media {
+                color: white;
+                padding-top: 20px;
+                grid-column: 1;
+                grid-row: 5/6;
+                /* Grid Options*/
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+            }
+            
+                .LinkedIn {
+                    padding-left: 120px;
+                    padding-right: 20px;
+                    grid-column: 1/2;
+                    grid-row: 1;
+                }
+                
+                .LinkedIn #linkedIN {
+                filter: invert(100%); 
+                object-fit: cover;
+                width: 40px;
+                height: 40px;
+                }
+                
+                .Portfolium {
+                    padding-right: 120px;
+                    padding-left: 20px;
+                    grid-column: 2/3;
+                    grid-row: 1;
+                }
+                
+                .Portfolium #Pert {
+                object-fit: cover;
+                width: 35px;
+                height: 35px;
+                }
+            
+            .Resume {
+                padding-top: 30px;
+                grid-column: 1;
+                grid-row: 6/7;
+            }
+    
+    
+    .About-Content {
+        background-color: #f0f6ff;
+        grid-column: 1/3;
+        grid-row: 3/4;
     }
     
-    .more {
-        padding-top: 15px;
-        grid-row: 1; 
-        grid-column: 8/9;
-    }
-
-.intro {
-    background: black;
-    grid-row: 2/3; 
-    grid-column: 1/4;
+        .About-Content #p5 {
+            padding: 20px;
+            padding-top: 100px;
+            font-size: 40px;
+        }
+        .About-Content #p6 {
+            padding: 20px;
+        }
+        .About-Content #p7 {
+            padding: 20px;
+            font-size: 30px;
+        }
     
-    /*Grid Settings*/
-    display: grid;
-    grid-template-rows: 30px;
-    grid-template-columns: 1fr 1fr;
-}
-
-    .intro_image {
-        grid-row: 1; 
-        grid-column: 1/2;
+    .Education-Contnet {
+        background-color: white;
+        grid-column: 1/3;
+        grid-row: 4/5;
     }
     
-    .intro_text {
-        color: white;
-        padding-top: 100px;
-        padding-right: 160px;
-        text-align: center;
-        grid-row: 1; 
-        grid-column: 2/3;
+        .Education-Contnet #p8 {
+            text-align: center;
+            padding: 20px;
+            padding-top: 200px;
+            font-size: 40px;
+        }
+        .Education-Contnet #p9 {
+            text-align: center;
+            padding: 20px;
+        }
+        .Education-Contnet #p10 {
+            text-align: center;
+            font-size: 30px;
+        }
+    
+    .Skills-Content {
+       background-color: #f0f6ff;
+        padding: 90px;
+        grid-column: 1/3;
+        grid-row: 5/6;
+        
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 20px repeat(4, 1fr);
+        grid-gap: 30px;
+        grid-column-gap: 80px ;
     }
-
-.body-1 {
-    color: grey;
-    padding-right: 50px;
-    padding-top: 100px;
-    padding-left: 100px;
-    text-align: center;
-    background: #F1EFF0;
-    grid-row: 3/4; 
-    grid-column: 1/2;
+    
+        .Skill {
+            background-color: #ffc757;
+            text-align: center;
+            padding-top: 35px;
+            font-size: 40px;
+        }
+        
+        .SkillTitle {
+            grid-column: 1/7;
+            grid-row: 1;
+            color: black;
+            font-size: 30px;
+        }
+        
+        .Skill1 {
+            border-radius: 10px;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        
+        .Skill2 {
+            border-radius: 10px;
+            grid-column: 3/5;
+            grid-row: 2/3;
+        }
+        
+        .Skill3 {
+            border-radius: 10px;
+            grid-column: 5/7;
+            grid-row: 2/3;
+        }
+        
+        .Skill4 {
+            border-radius: 10px;
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+        
+        .Skill5 {
+            border-radius: 10px;
+            grid-column: 3/5;
+            grid-row: 3/4;
+        }
+        
+        .Skill6 {
+            border-radius: 10px;
+            grid-column: 5/7;
+            grid-row: 3/4;
+        }
+        
+        .Skill7 {
+            border-radius: 10px;
+            grid-column: 1/4;
+            grid-row: 4/5;
+        }
+        
+        .Skill8 {
+            border-radius: 10px;
+            grid-column: 4/7;
+            grid-row: 4/5;
+        }
+        
+        .Skill9 {
+            border-radius: 10px;
+            grid-column: 1/3;
+            grid-row: 5/6;
+        }
+        
+        .Skill10 {
+            border-radius: 10px;
+            grid-column: 3/5;
+            grid-row: 5/6;
+        }
+        
+        .Skill11 {
+            border-radius: 10px;
+            grid-column: 5/7;
+            grid-row: 5/6;
+        }
+    
+    .bottomHead {
+        background-color: white;
+        grid-column: 1/3;
+        grid-row: 6/7;
+        
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 30px;
+    }
+        .Interests-Big {
+            padding: 20px;
+            grid-column: 1/2;
+            grid-row: 1;
+        }
+        
+        .ExtraCaricular {
+            padding: 20px;
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+            #p11 {
+                font-size: 40px;
+                padding-left: 100px;
+            }
+        
+            #p12 {
+                padding-top: 30px;
+                padding-left: 100px;
+            }
+            
+            #p13 {
+                padding-left: 100px;
+                border-spacing: 0 50px;
+                padding-top: 30px;
+                font-size: 30px;
+                text-align: left;
+            }
+            
+            #right {
+                text-align: right;
+            }
+        
+    
+    .Footer {
+        padding: 40px;
+        background-color: #006BB5;
+        color: #f5f5f5;
+        grid-column: 1/3;
+        grid-row: 7/8;
+    }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* For moble */
+@media only screen and (max-width: 1124px) {
+     /* unvisited link */
+    a:link {
+      color: white;
+      text-decoration: none;
+    }
+    
+    /* visited link */
+    a:visited {
+      color: white;
+    }
+    
+    /* mouse over link */
+    a:hover {
+      color: white;
+      font-size: 20px;
+    }
+    
+    /* selected link */
+    a:active {
+      color: white;
+    }
+    
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'Domine', serif;
+        color: black;
+        background-color: white;
+    }
+    
+    .TheGrid {
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 2fr .5fr 1fr 120vw .3fr .1fr;
+    }
+    
+    .Hedder {
+        background-color: #006BB5;
+        color: #f5f5f5;
+        grid-column: 1/3;
+        grid-row: 1/2;
+      
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 1fr) 4fr;
+        grid-template-rows: 1fr;
+    }
+        .About {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+        
+        .Education {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 3/4;
+            grid-row: 1;
+        }
+        
+        .Skills-Languages {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 4/5;
+            grid-row: 1;
+        }
+        
+        .Interests {
+            padding: 20px;
+            padding-top: 25px;
+            grid-column: 5/6;
+            grid-row: 1;
+        }
+        
+    .First-Body {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+        .Transparent-Background {
+            /* The image used */
+            background-image: url("personWalking.jpg");
+    
+            /* Set a specific height */
+            height: 1500px; 
+    
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            /* Cell settings */
+            grid-column: 1;
+            grid-row: 1/2;
+            z-index: 1;
+        }
+        
+        .Transparent-Text {
+            padding-top: 400px;
+            padding-left: 20px;
+            color: white;
+            grid-column: 1;
+            grid-row: 1/2;
+            z-index: 2;
+        }
+        
+            .Transparent-Text #p1 {
+                font-family: 'EB Garamond', serif;
+                font-size: 30px;
+            }
+            
+            .Transparent-Text #p2 {
+                font-family: 'boldFont', sans-serif;
+                font-size: 105px;
+            }
+            
+            .Transparent-Text #p3 {
+                font-size: 30px;
+            }
+            
+            .Transparent-Text #p4 {
+                font-size: 15px;
+            }
+            
+        .Infrmation-Holder {
+            padding-top: 200px;
+            color: white;
+            text-align: center;
+            background-color: #006BB5;
+            grid-column: 1;
+            grid-row: 2/3;
+            
+            /* Grid Options*/
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 200px 70px 100px 150px 70px 90px;
+        }
+            .Photo {
+                grid-column: 1;
+                grid-row: 1/2;
+            }
+            
+            .Photo #ProfPhoto {
+                object-fit: cover;
+                width: 200px;
+                height: 200px;
+            }
+            
+            .Name {
+                font-size: 30px;
+                padding-top: 20px;
+                grid-column: 1;
+                grid-row: 2/3;
+            }
+            
+            .Education-Small {
+                padding-top: 20px;
+                grid-column: 1;
+                grid-row: 3/4;
+            }
+            
+            .Contact {
+                padding-top: 80px;
+                grid-column: 1;
+                grid-row: 4/5;
+            }
+        
+            .Social-Media {
+                color: white;
+                padding-top: 20px;
+                grid-column: 1;
+                grid-row: 5/6;
+                /* Grid Options*/
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+            }
+            
+                .LinkedIn {
+                    padding-left: 120px;
+                    padding-right: 20px;
+                    grid-column: 1/2;
+                    grid-row: 1;
+                }
+                
+                .LinkedIn #linkedIN {
+                filter: invert(100%); 
+                object-fit: cover;
+                width: 40px;
+                height: 40px;
+                }
+                
+                .Portfolium {
+                    padding-right: 120px;
+                    padding-left: 20px;
+                    grid-column: 2/3;
+                    grid-row: 1;
+                }
+                
+                .Portfolium #Pert {
+                object-fit: cover;
+                width: 35px;
+                height: 35px;
+                }
+            
+            .Resume {
+                padding-top: 30px;
+                grid-column: 1;
+                grid-row: 6/7;
+            }
+    
+    
+    .About-Content {
+        background-color: #f0f6ff;
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    
+        .About-Content #p5 {
+            padding: 20px;
+            padding-top: 100px;
+            font-size: 40px;
+        }
+        .About-Content #p6 {
+            padding: 20px;
+        }
+        .About-Content #p7 {
+            padding: 20px;
+            font-size: 30px;
+        }
+    
+    .Education-Contnet {
+        background-color: white;
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+    
+        .Education-Contnet #p8 {
+            text-align: center;
+            padding: 40px;
+            padding-top: 200px;
+            font-size: 40px;
+        }
+        .Education-Contnet #p9 {
+            text-align: center;
+            padding: 40px;
+        }
+        .Education-Contnet #p10 {
+            text-align: center;
+            padding: 40px;
+            font-size: 30px;
+        }
+    
+    .Skills-Content {
+       background-color: #f0f6ff;
+        padding: 90px;
+        grid-column: 1/3;
+        grid-row: 5/6;
+        
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 20px repeat(4, 20vw);
+        grid-gap: 10px;
+        grid-column-gap: 40px ;
+    }
+    
+        .Skill {
+            word-wrap: break-word;
+            background-color: #ffc757;
+            text-align: center;
+            padding-top: 35px;
+            font-size: 3vw;
+        }
+        
+        .SkillTitle {
+            grid-column: 1/7;
+            grid-row: 1;
+            color: black;
+            font-size: 30px;
+        }
+        
+        .Skill1 {
+            border-radius: 10px;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        
+        .Skill2 {
+            border-radius: 10px;
+            grid-column: 3/5;
+            grid-row: 2/3;
+        }
+        
+        .Skill3 {
+            border-radius: 10px;
+            grid-column: 5/7;
+            grid-row: 2/3;
+        }
+        
+        .Skill4 {
+            border-radius: 10px;
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+        
+        .Skill5 {
+            border-radius: 10px;
+            grid-column: 3/5;
+            grid-row: 3/4;
+        }
+        
+        .Skill6 {
+            border-radius: 10px;
+            grid-column: 5/7;
+            grid-row: 3/4;
+        }
+        
+        .Skill7 {
+            border-radius: 10px;
+            grid-column: 1/4;
+            grid-row: 4/5;
+        }
+        
+        .Skill8 {
+            border-radius: 10px;
+            grid-column: 4/7;
+            grid-row: 4/5;
+        }
+        
+        .Skill9 {
+            border-radius: 10px;
+            grid-column: 1/3;
+            grid-row: 5/6;
+        }
+        
+        .Skill10 {
+            border-radius: 10px;
+            grid-column: 3/5;
+            grid-row: 5/6;
+        }
+        
+        .Skill11 {
+            border-radius: 10px;
+            grid-column: 5/7;
+            grid-row: 5/6;
+        }
+    
+    .bottomHead {
+        background-color: white;
+        grid-column: 1/3;
+        grid-row: 6/7;
+        
+        /* Grid Options*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
+        .Interests-Big {
+            padding: 20px;
+            grid-column: 1;
+            grid-row: 1/2;
+        }
+        
+        .ExtraCaricular {
+            padding: 20px;
+            grid-column: 1
+            grid-row: 2/3;
+        }
+            #p11 {
+                font-size: 40px;
+                padding-left: 100px;
+            }
+        
+            #p12 {
+                padding-top: 30px;
+                padding-left: 100px;
+            }
+            
+            #p13 {
+                padding-left: 100px;
+                border-spacing: 0 50px;
+                font-size: 4vw;
+                text-align: left;
+            }
+            
+            #right {
+                text-align: right;
+            }
+        
+    
+    .Footer {
+        padding: 40px;
+        background-color: #006BB5;
+        color: #f5f5f5;
+        grid-column: 1/3;
+        grid-row: 7/8;
+    }
 }
-.photo-1 {
-    text-align: right;
-    background: #F1EFF0;
-    grid-row: 3/4; 
-    grid-column: 2/4; 
-}
-.photo-2 {
-    text-align: left;
-    background:black;
-    grid-row: 4/5; 
-    grid-column: 1/3; 
-}
-.body-2 {
-    color: white;
-    padding-top: 100px;
-    padding-right: 100px;
-    padding-left: 50px;
-    text-align: center;
-    background: black;
-    color: white;
-    grid-row: 4/5; 
-    grid-column: 3/4; 
-}
-.footer {
-    padding-top: 5px;
-    text-align: center;
-    background: #353535;
-    color: white;
-    grid-row: 5/6; 
-    grid-column: 1/4; 
-}
-}
+    

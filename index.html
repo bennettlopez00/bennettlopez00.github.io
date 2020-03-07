@@ -1,45 +1,134 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <link rel="stylesheet" type="text/css" href="Portfolio.css">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+        <script src="jquery.localscroll.js" type="text/javascript"></script> 
+        <script src="jquery.scrollTo.js" type="text/javascript"></script> 
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $('#nav').localScroll({duration:800});
+            });
+        </script>
     </head>
+    
     <body>
-        <div class= "TheGrid">
-            <div class= "cell hedder">
-                <div class= "cell logo"> <img src="Bennett_logo.png" alt="myLogo" width="200" height="45"> </div>
-                <div class= "cell portfolio"><a href="https://portfolium.com/BennettLopez">Portfolio</a></div>
-                <div class= "cell resume"><a href="RESUME.pdf">Resume</a></div>
-                <div class= "cell linkedin"><a href="https://linkedin.com/in/bennett-lopez01">linkedin</a></div>
-                
-                
+        <div class = "TheGrid">
+            <div class = "Cell Hedder">
+                <div class = "Cell About"> <a href="#ContentJump"> About </a> </div>
+                <div class = "Cell Education"> <a href="#EducationJump"> Education </a> </div>
+                <div class = "Cell Skills-Languages"> <a href="#SkillJump"> Skills </a></div>
+                <div class = "Cell Interests"> <a href="#InterestsJump"> Interests </a> </div>
             </div>
             
-            /* Intro nested grid */
-            <div class= "cell intro">
-                <div class= "cell intro_image"><img src="intro_image.jpg" alt="myPhoto" width="768" height="600"></div>
-                <div class= "cell intro_text">
+            <div class = "Cell First-Body"> 
+            
+                <div class = "Cell Transparent-Background"> </div>
+                <div class = "Cell Transparent-Text"> 
+                <p id="p1"> H&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;O&nbsp;&nbsp; ,&nbsp;  I&nbsp;&nbsp;'&nbsp;&nbsp; M </p><br> 
+                <p id="p2"><b> Bennett Lopez.</b></p><br>
+                <p id="p3"> A Computer Sicence Major </p> <br>
+                <p id="p4"> with an emphasis in Cyber Security </p>
+                </div>
                 
-                <h1>Hello! My Name is Bennett Lopez</h1>
-                <p>
-                    I am currently enrolled as a Junior in the school of Computer Science with an emphasis in Cyber Security at George Fox University. I'm a fast learner, quick on my feet, and a people person. I'm eager to pursue any challenge that I come across, and have a positive impact on my workplace.
-                </p>
+                <div class = "Cell Infrmation-Holder"> 
+                    <div class = "Cell Photo"> <img src="profile_photo.png" id = "ProfPhoto"> </div>
+                    <div class = "Cell Name"> Bennett Lopez </div>
+                    <div class = "Cell Education-Small"> BS In Computer Science<br> George Fox University<br>Newberg, Oregon </div>
+                    <div class = "Cell Contact"> bennettlopez01@gmail.com <br> 541-554-3661 </div>
+                    <div class = "Cell Social-Media"> 
+                        <div class = "Cell LinkedIn"> <img src="linkedIn_logo.png" id = "linkedIN"> </div>
+                        <div class = "Cell Portfolium"> <img src="Port_logo.png" id = "Pert"> </div>
+                    </div>
+                    <div class = "Cell Resume"> RESUME </div>
+                </div>
+            </div>
+            
+            
+            <div class = "Cell About-Content"> 
+            <a id="ContentJump"></a>
+            <p id = "p5"> About </p>
+            <p id = "p6">MY BACKGROUND</p>
+            <p id = "p7"> I am currently enrolled as a Junior in the school of Computer Science with an emphasis in Cyber Security at George Fox University. I'm a fast learner, quick on my feet, and a people person. I'm eager to pursue any challenge that I come across, and have a positive impact on my workplace.</p>
+            </div>
+            
+            
+            
+            <div class = "Cell Education-Contnet"> 
+            <a id="EducationJump"></a>
+            <p id = "p8"> Education</p>
+            <p id = "p9"> WHAT I'VE LEARNED</p>
+            <p id = "p10"> 2017-2021 <br><br> George Fox University - Newberg, OR; Class of 2021 <br> Bachelor of Science; Computer Science <br> Emphasis in Cyber Security</b></p>
+            </div>
+            
+            
+            <div class = "Cell Skills-Content">
+                <div class = "Cell SkillTitle" id="SkillJump">Skills</div>
+                <div class = "Skill Skill1">Object oriented</div>
+                <div class = "Skill Skill2">Java</div>
+                <div class = "Skill Skill3">SQL</div>
+                <div class = "Skill Skill4">CSS</div>
+                <div class = "Skill Skill5">Python</div>
+                <div class = "Skill Skill6">C++</div>
+                <div class = "Skill Skill7">Collaborative Work Style</div>
+                <div class = "Skill Skill8">Interpersonal Communication</div>
+                <div class = "Skill Skill9">Scala</div>
+                <div class = "Skill Skill10">Teamwork</div>
+                <div class = "Skill Skill11">HTML</div>
+            </div>
+            
+            
+            <div class = "Cell bottomHead">
+                <a id="InterestsJump"></a>
+                <div class = "Cell Interests-Big"> 
+                    <p id = "p11">Interests</p>
+                    <p id = "p12">WHAT I LIKE TO DO</p>
+                    <table id = "p13">
+                        <tr>
+                            <th>Soccer</th>
+                            <th id = "right">Reading</th>
+                        </tr>
+                        <tr>
+                            <th>Cooking</th>
+                            <th id = "right">Puzzle Solving</th>
+                        </tr>
+                        <tr>
+                            <th>Photography</th>
+                            <th id = "right">Reading</th>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class = "ExtraCaricular">
+                    <p id = "p11">Extra Cariculars</p>
+                    <p id = "p12">HOW I VOLUNTEER</p>
+                    <table id = "p13">
+                        <tr>
+                            <th>Junior Software Devloper Mentorship</th>
+                        </tr>
+                        <tr>
+                            <th>Eugene Blood Drive</th>
+                        </tr>
+                        <tr>
+                            <th>Eugene Public Library</th>
+                        </tr>
+                    </table>
                 </div>
                 
             </div>
-            <div class= "cell body-1"><h1>What Can I do? </h1>
-            <p>
-                I am proficient in computer languages such as Java, Python and C++, along with other smaller languages such as Scala, Veralog, ARM assembly. I excel in database queries, management and creation. I am constantly engaged in the software development process, and eger to know what I don't know. And then go learn it!
-            </p>
             
             
-            </div>
-            <div class= "cell photo-1"><img src="stock_photo.jpg" alt="myPicture" ></div>
-            <div class= "cell photo-2"><img src="image1.jpg" alt="myPicture" ></div>
-            <div class= "cell body-2"><h1>Why me?</h1>
-            <p>Because I have a proven track record of persistence, reliability and determination. I do not put my name on anything that I am 100% confident in it's quality and utility. I have no issue picking up new skills, working on them until it becomes second nature. Why me? Because of my drive. </p>
+            <div class = "Cell Footer"> bennettlopez01@gmail.com <br> 541-554-3661 </div>
             
-            </div>
-            <div class= "cell footer">Contact: (541)-554-3661    |    bennettlopez01@gmail.com</div>
+            
         </div>
-    </body
+    </body>
 </html>
