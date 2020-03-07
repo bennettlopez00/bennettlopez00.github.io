@@ -729,7 +729,8 @@
             word-wrap: break-word;
             background-color: #ffc757;
             text-align: center;
-            padding-top: 60px;
+            padding: 60px;
+            padding-top: 100px;
             font-size: 3vw;
         }
         
