@@ -721,7 +721,8 @@
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 20px repeat(4, 20vw);
         grid-gap: 10px;
-        grid-column-gap: 40px ;
+        grid-column-gap: 40px;
+        padding: 60px;
     }
     
         .Skill {
@@ -729,8 +730,7 @@
             word-wrap: break-word;
             background-color: #ffc757;
             text-align: center;
-            padding: 60px;
-            padding-top: 100px;
+            padding: 10px;
             font-size: 3vw;
         }
         
