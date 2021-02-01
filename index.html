@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="landing.css">
+        <script type="text/javascript" src="landing.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!-- NAME FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap" rel="stylesheet">
+        <!-- Profession FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Nanum+Gothic&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <!-- EDUCATION LINK-->
+        <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="sandbox.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+        
+    </head>
+    <body onload="onLoad()">
+        <div id="TheGrid">
+            <div id="Header">
+                <div id="BlueFillerSquare">
+                    <div id="square"></div>
+                    
+                </div>
+                <div id="HeadLeft">
+                    <div class="headderText" id="Head_Name"> Bennett Lopez </div>
+                    <div class="headderText" id="Head_Title"> &nbsp;&nbsp;/ &nbsp;&nbsp;SOFTWARE ENGINEER</div>
+                </div>
+                <div id="HeadRight">
+                    <a class="headderLinks" id="Head_About"> ABOUT ME</a>
+                    <a class="headderLinks" id="Head_Resume" href="file:///Users/bennettlopez/Desktop/Portfolio_Project/Resume.pdf/"> RESUME</a>
+                    <a class="headderLinks" id="Head_Projects" href="#Carousel">PROJECTS</a>
+                    <a class="headderLinks" id="Head_Contact" href="url">CONTACT</a>
+                </div>
+            </div>
+            <div id="IntroBody">
+                <div id="LeftBackground"></div>
+                <div id="CenerIcon">
+                    <div id="CenterPhoto"><img id="profilePhoto" src="profile_photo.png"></div>
+                    <div id="Information">
+                    <p> Bennett <br>Lopez</p>
+                    </div>
+                    <div id="BlueHighlight"></div>
+                    <div id="Sub-Title"> SOFTWARE ENGINEER</div>
+                    <div id = "SocialLinks">
+                        <a href="https://portfolium.com/BennettLopez" id="Port_link"> <img src="Port_logo.png" id="PortLogo"> </a>
+                        <a href="https://linkedin.com/in/bennett-lopez01" id="Linked_link">  <img src="linkedIn_logo.png" id="linkedInLogo"></a>
+                    </div>
+                    <div id="CenterText"> 
+                        <p id="Center_Greeting"> Hello </p>
+                        <p id="Center_Message"> Here's who I am & what I do </p>
+                        <p id="Center_Introduction"> I am currently enrolled as a Senior in the school of Computer Science with an emphasis in Cyber Security at George Fox University. I'm a fast learner, quick on my feet, and a people person. I'm eager to pursue any challenge that I come across, and have a positive impact on my workplace. </p>
+                    </div>
+                </div>
+                <div id = RightFiller></div>
+            </div>
+            <div id="bottomSection">
+                <div id="leadingBoxFiller" class="filler"></div>
+                <div id="boxFiller0" class="filler"></div>
+                <div id="boxFiller1" class="filler"></div>
+                <div id="boxFiller2" class="filler"></div>
+                <div id="boxFiller3" class="filler"></div>
+                <div id="educationSection">
+                    <div id="Education_Title"><b>Education</b></div>
+                    <div id="Education_Highshcool">2014 / 2017<br>Henry D. Sheldon Highschool<br><br>Graduated though the Internation Highschool with a certificate of spanish emersion. Graduated with an Internation Baccaloriate Deploma, and as a memeber of the National Honor Society</div>
+                    <div id="Education_University">2017 / 2021<br>George Fox University<br><br>Expected Graduation with a B.S in Computer Science with an emphasis in Cyber Security</div>
+                </div>
+                
+            </div>
+            
+            <div id="Carousel">
+                <div id="Left-Boarder"></div>
+                <div id="Right-Boarder"></div>
+                <div id="Left-Cover"><img id="Left_Cover_Image" src="stock4.png"></div>
+                <div id="Right-Cover"><img id="Right_Cover_Image" src="stock5.png"></div>
+                <div id="Left-Preview"><img id="Left_Image" src="stock2.png"></div>
+                <div id="Right-Preview"><img id="Right_Image" src="stock3.png"></div>
+                <div id="Center-Main"><img id="Main_Image" src="stock1.png"></div>
+            
+                <button onclick="movePaneLeft()" id="Left_Button"> <img class="arrowButtons" id="Left_Arrow" src="arrow.png" onmouseover="buttonHover(true)" onmouseout="buttonHover(false)"></button>
+                <button onclick="movePaneRight()" id="Right_Button"> <img class="arrowButtons" id="Right_Arrow" src="arrow.png" onmouseover="buttonHover(true)" onmouseout="buttonHover(false)"></button>
+                <p id="Bottom_Title">Enviromental Simulation Using CUDA Framework</p>
+                <p id="Bottom_Description">This project used the CUDA Nvidia GPU framework in order to simulate the clasic Predator-Prey problem. This program demonstrates how optimizations can be made, and how specialized hardware can increase the amount of parallelization possible.</p>
+                <a id="Bottom_Link" href="file:///Users/bennettlopez/Desktop/Portfolio_Project/CUDA/" target="_blank" rel="noopener noreferrer">full project</a>
+            </div>
+        </div>
+    </body>
+</html>
