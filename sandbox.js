@@ -25,13 +25,13 @@ var description =
 "<p> This project used parallelization to crawl webpages, gathering the URLs. This project was restricted to certain domains, to be used only as an self auditing tool</p>", 
 "<p> This project used the CISICO packet tracer program in order to setup a local network. This involved having a limited address space, utilizing NAT, DHCP, Switches, Routers and various hosts.</p>"];
 
-var links = ["file:///Users/bennettlopez/Desktop/Portfolio_Project/CUDA/",
-"file:///Users/bennettlopez/Desktop/Portfolio_Project/Database/",
-"file:///Users/bennettlopez/Desktop/Portfolio_Project/Chess/",
-"file:///Users/bennettlopez/Desktop/Portfolio_Project/Agile/",
+var links = ["https://bennettlopez00.github.io/CUDA/CUDA.html",
+"https://bennettlopez00.github.io/Database/Database.html",
+"https://bennettlopez00.github.io/Chess/Chess.html",
+"https://bennettlopez00.github.io/Agile/Agile.html",
 "https://bennettlopez0101.github.io",
-"file:///Users/bennettlopez/Desktop/Portfolio_Project/webCrawler/",
-"file:///Users/bennettlopez/Desktop/Portfolio_Project/Packet_Traser/Final_Vid.mp4",];
+"https://bennettlopez00.github.io/webCrawler/Crawler.html",
+"https://bennettlopez00.github.io/Packet_Traser/Tracer.html",];
 var numberStrings = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 function main() {
@@ -290,7 +290,6 @@ function unScrambleLetters(direction) {
     else {
         current = document.getElementById('Left_Image').src;
     }
-    
     var inedxOfNext = findTheInteger(current) - 1;
     var nextTitle = titles[inedxOfNext];
     var nextDescription = description[inedxOfNext];
@@ -319,8 +318,10 @@ function findTheInteger(originalString) {
     var theInteger;
     for (var i = 0; i < originalString.length; i++) {
         if (numberStrings.includes(originalString.charAt(i))) {
-            theInteger = originalString.charAt(i);
-            break;
+            if (Number(originalString.charAt(i)) > 0) {
+                theInteger = originalString.charAt(i);
+                break;
+            }
         }
     }
     return theInteger;
@@ -330,7 +331,6 @@ function findTheInteger(originalString) {
 function buttonHover(isOver) {
     var rightArrow = document.getElementById('Right_Arrow');
     var leftArrow = document.getElementById('Left_Arrow');
-    console.log(rightArrow.style.opacity);
     var id = setInterval(frame, 10);
     var currentSteps;
     if (isOver) {
@@ -342,20 +342,17 @@ function buttonHover(isOver) {
     function frame() {
         if ((currentSteps <= 0 && !isOver) || (currentSteps >= 50 && isOver)) {
             clearInterval(id);
-            console.log("DONE");
         } 
         else {
             if (isOver) {
                 currentSteps = currentSteps + 1;
                 rightArrow.style.opacity = Number(rightArrow.style.opacity) + .01;
                 leftArrow.style.opacity = Number(leftArrow.style.opacity) + .01;
-                console.log("GROWING: " + rightArrow.style.opacity);
             }
             else {
                 currentSteps = currentSteps - 1;
                 rightArrow.style.opacity -= .01;
                 leftArrow.style.opacity -= .01;
-                console.log("SHINKING: " + rightArrow.style.opacity);
             }
         }
     }

@@ -19,8 +19,6 @@ function windowResize() {
     if (currentSize < 0) {
         currentSize = 0;
     }
-    // var height = window.innerHeight;
-    console.log("Width: " + width);
     // console.log("Height: " + height);
     document.getElementById('bottomSection').style.gridTemplateColumns = currentSize + size + currentSize + "px";
     document.getElementById('Header').style.gridTemplateColumns = "100px " + ((width / 2) - 100) + "px " + ((width / 2) - 100) + "px";
