@@ -809,6 +809,7 @@ a:hover {
     text-align: center;
     grid-column: 3/5;
     grid-row: 4/5;
+    padding: 10px;
 }
 
 #Bottom_Description {
@@ -819,6 +820,7 @@ a:hover {
     text-align: center;
     grid-column: 3/5;
     grid-row: 5/6;
+    padding: 10px;
 }
 
 #Bottom_Link {
@@ -829,6 +831,7 @@ a:hover {
     text-align: center;
     grid-column: 3/5;
     grid-row: 6/7;
+    padding: 10px;
 }
 
 .arrowButtons {
