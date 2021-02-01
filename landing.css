@@ -802,6 +802,7 @@ a:hover {
  */}
  
 #Bottom_Title {
+  padding: 10px;
     font-family: 'Heebo', sans-serif;
     font-size: 45px;
     position: relative;
@@ -809,10 +810,10 @@ a:hover {
     text-align: center;
     grid-column: 3/5;
     grid-row: 4/5;
-    padding: 10px;
 }
 
 #Bottom_Description {
+  padding: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     padding-top: 120px;
@@ -820,10 +821,10 @@ a:hover {
     text-align: center;
     grid-column: 3/5;
     grid-row: 5/6;
-    padding: 10px;
 }
 
 #Bottom_Link {
+  padding: 10px;
    font-family: 'Montserrat', sans-serif;
     padding-top: 250px;
     font-size: 15px;
@@ -831,7 +832,6 @@ a:hover {
     text-align: center;
     grid-column: 3/5;
     grid-row: 6/7;
-    padding: 10px;
 }
 
 .arrowButtons {
